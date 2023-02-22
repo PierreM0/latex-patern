@@ -7,19 +7,33 @@
 \usepackage{fancyhdr}
 \usepackage[french]{babel}
 \usepackage{titling}
+\usepackage[bmargin=2.5cm, tmargin=2.5cm, rmargin=2.5cm, lmargin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{biblatex}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
 \newcommand{\subtitle}[1]{%
   \posttitle{%
     \par\end{center}
     \begin{center}\large#1\end{center}
     \vskip0.5em}%
 }
-\usepackage[bmargin=2.5cm, tmargin=2.5cm, rmargin=2.5cm, lmargin=2.5cm]{geometry}
 
 \newcommand{\nomEntier}{Prenom Nom} % MODIF ICI
 \newcommand{\dateRendu}{\today} % MODIF ICI
 \newcommand{\titreDoc}{Titre} % MODIF ICI
 \newcommand{\sousTitreDoc}{Sous titre} % MODIF ICI
 \newcommand{\sousSousTitreDoc}{Precision} % MODIF ICI
+\newcommand{\fichierBib}{patern.bib} % MODIF ICI
+
+\addbibresource{\fichierBib}
 
 \setcounter{page}{0}
 
@@ -62,15 +76,18 @@
  \thispagestyle{fancy}
 \newpage
 
-
-
 \tableofcontents
 \newpage
 
-\section{Section Premiere}
+\section{Lorem}
 \lipsum
-\section{Section Seconde}
-\subsection{sous section}
-\subsubsection{sous sous section}
+\section{Ipsum}
 \lipsum
+
+\cite{WEBSITE:1}{preuve: internet}
+
+
+\cite{BOOK:1}{...mais aussi un livre}
+
+\printbibliography
 \end{document}

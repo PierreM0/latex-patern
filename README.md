@@ -1,6 +1,8 @@
-# Patern for my LaTeX documents
+# Pattern for my LaTeX documents
 
 ## How to use : 
 
-`./compile.sh patern`
+First time only : `latex pattern`
+
+`./compile.sh pattern`
 
