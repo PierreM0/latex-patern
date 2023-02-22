@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath,newtxtext}
+\usepackage{lipsum} 
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage[french]{babel}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+\usepackage[bmargin=2.5cm, tmargin=2.5cm, rmargin=2.5cm, lmargin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{biblatex}
+
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\newcommand{\nomEntier}{Prenom Nom} % MODIF ICI
+\newcommand{\dateRendu}{\today} % MODIF ICI
+\newcommand{\titreDoc}{Titre} % MODIF ICI
+\newcommand{\sousTitreDoc}{Sous titre} % MODIF ICI
+\newcommand{\sousSousTitreDoc}{Precision} % MODIF ICI
+\newcommand{\fichierBib}{patern.bib} % MODIF ICI
+
+\addbibresource{\fichierBib}
+
+\setcounter{page}{0}
+
+
+% style des pages
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-3pt}
+\lhead{\nomEntier}
+\rhead{\dateRendu}
+\renewcommand{\headrulewidth}{0pt}
+\onehalfspacing
+
+
+
+% add title
+% no de bas de page -> sommaire
+% page de presentation -> sommaire -> debut
+
+
+\begin{document}
+
+\begin{titlepage}
+    \nomEntier \hfill \dateRendu
+    \begin{center}
+        \vspace*{7cm}
+        
+        \Huge
+        \textbf{\titreDoc}
+ 
+        \vspace{0.5cm}
+        \LARGE
+        \sousTitreDoc
+
+        \vspace{0.5cm}
+        \large
+        \sousSousTitreDoc
+    \end{center}
+ \end{titlepage}
+ \thispagestyle{fancy}
+\newpage
+
+
+
+\tableofcontents
+\newpage
+
+\section{Lorem}
+\lipsum
+\section{Ipsum}
+\lipsum
+
+\cite{WEBSITE:1}{preuve: internet}
+
+
+\cite{BOOK:1}{...mais aussi un livre}
+
+\printbibliography
+\end{document}
